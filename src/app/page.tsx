@@ -19,7 +19,7 @@ export default async function Home() {
   const blogEntries = await getBlogEntries();
 
   return (
-    <main className="flex min-h-screen flex-col p-24 gap-y-8">
+    <main className="flex min-h-screen flex-col p-24 gap-y-8 bg-gradient-to-b from-blue-100 to-pink-100">
       {blogEntries.items.map((singlePost) => {
         const { slug, title, date } = singlePost.fields;
 

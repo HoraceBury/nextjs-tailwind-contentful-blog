@@ -42,11 +42,11 @@ export default async function BlogPage({ params }: BlogPageProps) {
   const { title, date, content } = article.fields;
 
   return (
-    <main className="min-h-screen p-24 flex justify-center">
+    <main className="min-h-screen p-24 flex justify-center bg-gradient-to-b from-blue-100 to-pink-100">
       <div className="max-w-2xl">
-        <h1 className="font-extrabold text-3xl mb-2">{title}</h1>
+        <h1 className="text-4xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white mb-4">{title}</h1>
 
-        <p className="mb-6 text-slate-400 ">
+        <p className="text-sm text-gray-500 dark:text-gray-400 mb-8 tracking-wide">
           Posted on{" "}
           {new Date(date).toLocaleDateString("en-US", {
             year: "numeric",
@@ -55,7 +55,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
           })}
         </p>
 
-        <div className="[&>p]:mb-8 [&>h2]:font-extrabold">
+        <div className="[&>p]:mb-8 [&>h3]:font-extrabold">
           { documentToReactComponents(content) }
         </div>
       </div>
